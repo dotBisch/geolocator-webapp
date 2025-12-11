@@ -4,7 +4,7 @@ import { User, HistoryItem, GeoData } from '../types';
 export const supabaseService = {
   // --- Auth ---
   async login(email: string, password: string): Promise<User> {
-    if (!supabase) throw new Error('Supabase not configured');
+    if (!supabase) throw new Error('Supabase not configured. Check your .env file and restart the server.');
     
     const { data, error } = await supabase.auth.signInWithPassword({
       email,
@@ -23,7 +23,7 @@ export const supabaseService = {
   },
 
   async signUp(email: string, password: string, name?: string): Promise<User> {
-    if (!supabase) throw new Error('Supabase not configured');
+    if (!supabase) throw new Error('Supabase not configured. Check your .env file and restart the server.');
 
     const { data, error } = await supabase.auth.signUp({
       email,
