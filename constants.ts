@@ -1,5 +1,5 @@
 export const API_URLS = {
-  LOGIN: 'http://localhost:8000/api/login',
+  LOGIN: `${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/api/login`,
   IP_GEO: 'https://ipinfo.io/json', // Using standard endpoint, can append /<ip>
 };
 

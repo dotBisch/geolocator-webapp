@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import { GeoData } from '../types';
+import greenPinIcon from '../assets/green-pin.svg';
 
 // Custom Green Pin Icon with Label
 const createCustomIcon = (label: string) => {
@@ -9,7 +10,7 @@ const createCustomIcon = (label: string) => {
     className: 'custom-pin-icon',
     html: `
       <div style="position: relative; width: 48px; height: 40px;">
-        <img src="/green-pin.svg" style="width: 100%; height: 100%; display: block;" />
+        <img src="${greenPinIcon}" style="width: 100%; height: 100%; display: block;" />
         <span style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); color: white; font-weight: bold; font-size: 14px; line-height: 1;">${label}</span>
       </div>
     `,

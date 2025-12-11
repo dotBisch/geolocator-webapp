@@ -318,7 +318,7 @@ export const Home: React.FC = () => {
                          <p className="text-xs text-gray-500 font-mono">{item.data.ip}</p>
                        </div>
                        <div className="text-[10px] text-gray-400">
-                         {new Date(item.timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+                         {new Date(item.created_at || item.timestamp || Date.now()).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
                        </div>
                      </div>
                    ))}
